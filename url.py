@@ -1,4 +1,8 @@
 import socket 
+import ssl
+
+ctx = ssl.create_default_context()
+s = ctx.wrap_socket(s, server_hostname=host)
 
 class URL:
     def __init__(self, url):
